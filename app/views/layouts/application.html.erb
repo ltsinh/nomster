@@ -3,6 +3,7 @@
   <head>
     <title>Nomster</title>
     <%= csrf_meta_tags %>
+   
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -29,6 +30,13 @@
   </div>
 </nav>
 
+<% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+ 
     <%= yield %>
   </body>
 </html>
