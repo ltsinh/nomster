@@ -8,5 +8,5 @@ class Place < ApplicationRecord
 
   validates :name, presence: true, length: { maximum: 50, minimum: 3 }
   validates :address, length: { minimum: 8 }, presence: true
-  validates :description, length: { in: 25..140 }, presence: true
+  validates :description, length: { in: 2..300 }, presence: true
 end
